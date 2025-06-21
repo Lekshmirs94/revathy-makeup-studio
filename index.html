@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revathy Make Up Studio & Beauty Parlour</title>
+  <style>
+    /* Reset & basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* SECTION STYLES */
+    .section {
+      width: 100%;
+      padding: 60px 20px;
+    }
+
+    /* TOP: Hero */
+    #hero {
+      background-image: url('img/hero.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #cb9ab9;
+      position: relative;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    #hero div {
+      position: relative;
+      z-index: 2;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    /* MIDDLE: Services */
+    #services-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff8fc;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .services-text {
+      flex: 1 1 60%;
+      padding-right: 30px;
+    }
+
+    .services-text h2 {
+      text-align: left;
+      font-size: 2.5rem;
+      color: #c71585;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #ffc0cb;
+      padding-bottom: 10px;
+    }
+
+    .service-category {
+      margin-bottom: 30px;
+    }
+
+    .service-category h3 {
+      font-size: 1.5rem;
+      color: #8b008b;
+      margin-bottom: 10px;
+      border-left: 4px solid #ff69b4;
+      padding-left: 10px;
+    }
+
+    .service-category h4 {
+      font-size: 1rem;
+      color: #553e55;
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+
+    .service-category ul {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .service-category li {
+      background-color: #ffe6f0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .service-category li:hover {
+      transform: translateY(-3px);
+      background-color: #ffccdd;
+      cursor: pointer;
+    }
+
+    .services-image {
+      flex: 1 1 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* Background image */
+      background-image: url('img/mid2.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      min-height: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* BOTTOM: Contact */
+    #contact {
+      background: #f9f9f9;
+      text-align: center;
+    }
+    #contact h3 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #ff69b4;
+    }
+    #contact .links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+    #contact .links a {
+      font-size: 1.5rem;
+    }
+    #contact address {
+      font-style: normal;
+      color: #ff69b4;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #services-wrapper {
+        flex-direction: column;
+      }
+
+      .services-text {
+        padding-right: 0;
+      }
+
+      .services-image {
+        margin-top: 20px;
+        min-height: 200px;
+      }
+
+      .service-category ul {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TOP HERO -->
+  <section id="hero" class="section">
+    <div>
+      <h1>Welcome to Revathy Make Up Studio & Beauty Parlour.</h1>
+      <p>Enhancing your beauty, one brush stroke at a time.</p>
+    </div>
+  </section>
+
+  <!-- MIDDLE SERVICES -->
+  <section id="services-wrapper">
+    <div class="services-text">
+      <h2>Our Services</h2>
+
+      <div class="service-category">
+        <h3>💄 Makeup Services</h3>
+        <ul>
+          <li>Bridal Makeup</li>
+          <li>Party & Event Glam</li>
+          <li>Photoshoot Styling</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3>💆‍♀️ Skincare & Facials</h3>
+        <ul>
+          <li>Fruit Facial</li>
+          <li>Pearl Facial</li>
+          <li>Hydra Facial</li>
+          <li>Cleanup</li>
+          <li>D-Tan</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3>💇‍♀️ Hair Services</h3>
+        <ul>
+          <li>Hairspa</li>
+          <li>Dandruff Hairspa</li>
+          <li>Layercut</li>
+          <li>Hair Coloring</li>
+          <li>Hot Oil Treatment</li>
+          <li>Henna</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h3>💅 Beauty & Grooming</h3>
+        <ul>
+          <li>Pedicure</li>
+          <li>Manicure</li>
+          <li>Threading</li>
+        </ul>
+      </div>
+
+      <div class="service-category">
+        <h4>Book a session with us and let our expert artists craft the perfect look for your special occasion.</h4>
+      </div>
+    </div>
+
+    <div class="services-image"></div>
+  </section>
+
+  <!-- BOTTOM CONTACT -->
+  <footer id="contact" class="section">
+    <h3>Get In Touch</h3>
+    <div class="links">
+      <a href="https://www.instagram.com/revathy_makeup_studio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://wa.me/919495379434" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="tel:+919495379434">Call Us: +91 94953 79434</a>
+    </div>
+    <address>
+      Kannimel,<br />
+      Pattazhy, Kerala 691522<br />
+    </address>
+  </footer>
+</body>
+</html>
